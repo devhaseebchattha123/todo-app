@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { registerUser } from "@/lib/actions";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const registerSchema = z.object({
   name: z.string().min(2, "Naam kam az kam 2 characters"),
@@ -45,6 +46,10 @@ export default function RegisterPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">
+       <div className="fixed top-4 right-4">
+      <ThemeToggle />
+    </div>
+
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle className="text-2xl text-center">Register</CardTitle>

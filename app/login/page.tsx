@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const loginSchema = z.object({
   email: z.string().email("Valid email daalo"),
@@ -43,6 +44,11 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">
+      {/* Theme Toggle - Top Right Corner */}
+      <div className="fixed top-4 right-4">
+        <ThemeToggle />
+      </div>
+
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle className="text-2xl text-center">Login</CardTitle>
